@@ -16,11 +16,22 @@
                         <img src="logo_osec.png" alt="logo OSEC">
                     </div>
                     <div class="logo-text">
-                        <h2>OSEC</h2>
-                        <span>ONE STOP EDUCATION CENTRE</span>
+                        <h2>
+                            <span class="huruf-besar">O</span>ne
+                            <span class="huruf-besar">S</span>top
+                            <span class="huruf-besar">E</span>ducation
+                            <span class="huruf-besar">C</span>entre
+                        </h2>
                     </div>
                 </a>
-                <ul class="navbar-menu">
+
+                <button class="navbar-toggle" id="navbarToggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="navbar-menu" id="navbarMenu">
                     <li>
                         <a href="{{url('/')}}">Home</a>
                     </li>
