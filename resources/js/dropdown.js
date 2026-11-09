@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     });
 
-     document.addEventListener('click', function (event) {
+    document.addEventListener('click', function (event) {
         if (!event.target.closest('.dropdown')) {
             document.querySelectorAll('.dropdown.active').forEach(function (item) {
                 item.classList.remove('active');

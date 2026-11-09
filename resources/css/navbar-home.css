@@ -58,9 +58,52 @@ body{
 
 .logo-text h2 {
     color: var(--navy);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 10px;
+}
+
+.logo-text .kata{
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Animasi setiap kata */
+.logo-text .kata {
+    opacity: 0;
+    transform: translateY(-15px);
+
+    animation: munculHuruf 0.5s ease forwards;
+}
+
+/* Waktu kemunculan setiap kata */
+.logo-text .kata:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.logo-text .kata:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.logo-text .kata:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.logo-text .kata:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+/* Keyframes */
+@keyframes munculHuruf {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .huruf-besar {
@@ -71,12 +114,20 @@ body{
 .navbar-menu{
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 20px;
     list-style: none;
 }
 
 .navbar-menu a:hover{
-    color: var(--navy);
+    color: rgb(93, 169, 231);
+}
+
+.navbar-menu li a{
+    font-weight: bold;
+}
+
+.navbar-menu li a.active{
+    color: rgb(93, 169, 231);
 }
 
 .dropdown{
@@ -128,6 +179,10 @@ body{
     transition: 0.3s;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 @media screen and (max-width: 768px) {
     .navbar-container{
         padding: 10px 20px;
@@ -155,6 +210,7 @@ body{
 
     .navbar-menu.active {
         display: flex;
+        align-items: center;
     }
 
     .logo-icon{

@@ -17,10 +17,18 @@
                     </div>
                     <div class="logo-text">
                         <h2>
-                            <span class="huruf-besar">O</span>ne
-                            <span class="huruf-besar">S</span>top
-                            <span class="huruf-besar">E</span>ducation
-                            <span class="huruf-besar">C</span>entre
+                            <span class="kata">
+                                <span class="huruf-besar">O</span><span>ne</span>
+                            </span>
+                            <span class="kata">
+                                <span class="huruf-besar">S</span><span>top</span>
+                            </span>
+                            <span class="kata">
+                                <span class="huruf-besar">E</span><span>ducation</span>
+                            </span>
+                            <span class="kata">
+                                <span class="huruf-besar">C</span><span>entre</span>
+                            </span>
                         </h2>
                     </div>
                 </a>
@@ -36,7 +44,10 @@
                         <a href="{{url('/')}}">Home</a>
                     </li>
                     <li>
-                        <a href="{{url('/about')}}">About</a>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="{{url('/tutors')}}">Tutors</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">

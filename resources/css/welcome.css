@@ -1,0 +1,172 @@
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card1, .card2, .card3, .card4 {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #173B65;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: slideRight 0.8s ease forwards;
+}
+
+.card-content{
+    text-align: center;
+    background: rgba(44, 107, 170, 0.65);
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    color: #FFFFFF;
+    font-weight: bold;
+    align-items: stretch;
+    width: 100%;
+}
+
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.btn-more{
+    display: inline-block;
+    padding: 12px 30px;
+    background: #173B65;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 25%;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-more:hover{
+    background: #F5B82E;
+    color: #173B65;
+}
+
+.about{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.about h2{
+    font-weight: bold;
+    font-size: 54px;
+    font-family:'Times New Roman', Times, serif;
+    color: #173B65;
+}
+
+.container-about{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.founder{
+    width: 100%;
+    text-align: center;
+}
+
+.foto-founder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-founder img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.founder h3{
+    margin-top: 15px;
+    color: #173B65;
+    font-weight: bold;
+}
+
+.text-about{
+    text-align: justify;
+    text-indent: 30px;
+}
+
+@keyframes slideRight{
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.card1 {
+    animation-delay: 0.2s;
+}
+
+.card2 {
+    animation-delay: 0.4s;
+}
+
+.card3 {
+    animation-delay: 0.6s;
+}
+
+.card4 {
+    animation-delay: 0.8s;
+}
+
+@media screen and (max-width: 768px) {
+    .card-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card1, .card2, .card3, .card4{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .container-about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .founder {
+        width: 100%;
+        text-align: center;
+    }
+
+    .foto-founder{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-about {
+        width: 100%;
+        text-align: justify;
+        margin-top: 20px;
+    }
+}
