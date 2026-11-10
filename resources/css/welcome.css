@@ -13,7 +13,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border: 1px solid #173B65;
-    margin-top: 20px;
+    margin-top: 48px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -140,6 +140,36 @@
     animation-delay: 0.8s;
 }
 
+.info-container{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.info-container .location, .info-container .telephone{
+    display: flex;
+    margin-top: 20px;
+}
+
+.info-container i{
+    font-size: 30px;
+}
+
+.telephone{
+    display: flex;
+    align-items: center;
+}
+
+.telephone-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.location-text address a:hover{
+    color: #173B65;
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 768px) {
     .card-container{
         grid-template-columns: repeat(1, 1fr);
@@ -169,4 +199,11 @@
         text-align: justify;
         margin-top: 20px;
     }
+
+    .info-container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
 }

@@ -2,3 +2,4 @@ import './bootstrap';
 import './dropdown.js';
 import './hamburger.js';
 import './clickactive.js';
+import './login.js';

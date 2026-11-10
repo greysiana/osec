@@ -1,0 +1,32 @@
+footer{
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer span{
+    margin-right: 20px;
+}
+
+footer a{
+    color: white;
+    font-size: 30px;
+}
+
+footer a:hover{
+    color: #1877F2;
+    transition: 0.3s;
+}
+
+footer .follow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .sosmed{
+    display: flex;
+    gap: 30px;
+}

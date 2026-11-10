@@ -3,8 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>OSEC | Bimbingan Belajar</title>
-        <meta name="description" content="OSEC merupakan lembaga bimbingan belajar untuk membantu siswa meraih prestasi terbaik.">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
         @vite(['resources/css/app.css','resources/js/app.js'])
     </head>
@@ -47,7 +45,7 @@
                         <a href="#about">About</a>
                     </li>
                     <li>
-                        <a href="{{url('/tutors')}}">Tutors</a>
+                        <a href="#">Tutors</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">
@@ -70,10 +68,16 @@
                         <a href="#">Career</a>
                     </li>
                     <li>
-                        <a href="#">Login</a>
+                        <a href="#" id="loginBtn">Login</a>
                     </li>
                 </ul>
             </div>
         </nav>
+        <div class="popup-overlay" id="popup">
+            <div class="popup-box">
+                <span class="close-popup" id="closePopup">&times;</span>
+                <h3>Login</h3>
+            </div>
+        </div>
     </body>
-</html>
+</html> 

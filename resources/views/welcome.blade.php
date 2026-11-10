@@ -8,7 +8,7 @@
         @vite(['resources/css/app.css','resources/js/app.js'])
     </head>
     <body>
-        <x-navbar-home />
+        <x-navbar-home/>
         <div class="card-container">
             <div class="card1" style="background-image: url('{{ asset('images/Card1.png') }}');">
                 <div class="card-content">
@@ -63,8 +63,25 @@
                         Through many years a lot of OSEC's students are able to know english even win a lot of english competition in a few location in Indonesia.
                         Now, OSEC has another branch in Sidikalang, North Sumatera.
                     </p>
+                    <div class="info-container">
+                        <div class="location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="location-text">
+                                <strong>OSEC Kisaran</strong>
+                                <address><a href="https://www.google.com/maps/place/One+Stop+Education+Center+(OSEC)/@2.9843625,99.6274753,20z/data=!4m6!3m5!1s0x30324b4bef9bb12b:0x759170e3cee45bb0!8m2!3d2.9843617!4d99.6281273!16s%2Fg%2F11h4dkzx_5?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Cipto street number 07 Kisaran, North Sumatera</a></address>
+                            </div>
+                        </div>
+                        <div class="telephone">
+                            <i class="fa-solid fa-phone"></i>
+                            <div class="telephone-text">
+                                <strong>Phone Number</strong>
+                                <span>081396167119</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <x-footer/>
     </body>
 </html>
