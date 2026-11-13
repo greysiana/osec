@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,7 +76,17 @@
         <div class="popup-overlay" id="popup">
             <div class="popup-box">
                 <span class="close-popup" id="closePopup">&times;</span>
-                <h3>Login</h3>
+                <h3>User Login</h3>
+                    <div class="username">
+                        <label for="Username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter Username" required>
+                    </div>
+                    <div class="password">
+                        <label for="Password">Password</label>
+                        <input type="password" id="password" name="assword" placeholder="Enter Password" required>
+                    </div>
+                    <button>Login</button>
+                    <a href="">Don't have an account?Register</a>
             </div>
         </div>
     </body>

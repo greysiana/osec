@@ -2,6 +2,7 @@
 @import './navbar-home.css';
 @import './welcome.css';
 @import './footer.css';
+@import './login.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';

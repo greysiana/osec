@@ -49,7 +49,8 @@
                     <h4>Co-Founder</h4>
                 </div>
                 <div class="text-about">
-                    <p>OSEC is an informal institute for teaching english since 2013.
+                    <p>
+                        OSEC is an informal institute for teaching english since 2013.
                         The Founder is Tateisi Theresa Kabwere or known as mam Regar.
                         Since 1999 started teaching in English towards teenagers in a town.
                         Because of her big willing to improve the education, 

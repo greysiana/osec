@@ -12,29 +12,29 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pegawai', function (Blueprint $table) {
-            $table->id('Id_pegawai');
-            $table->string('Kode_pegawai', 20)->unique();
-            $table->string('Nama', 100);
-            $table->string('Foto', 255)->nullable();
-            $table->enum('Jenis_kelamin',['Laki-laki','Perempuan']);
-            $table->string('Tempat_lahir', 100)->nullable();
-            $table->date('Tanggal_lahir')->nullable();
-            $table->string('No_hp', 20)->nullable();
-            $table->string('Email', 100)->nullable()->unique();
-            $table->string('Provinsi', 100)->nullable();
-            $table->string('Kabupaten', 100)->nullable();
-            $table->string('Kecamatan', 100)->nullable();
-            $table->string('Kelurahan', 100)->nullable();
-            $table->text('Alamat')->nullable();
-            $table->string('Kode_pos', 10)->nullable();
-            $table->string('Pendidikan_terakhir', 50)->nullable();
-            $table->string('Jurusan', 50)->nullable();
-            $table->enum('Jabatan',['Admin', 'Tutor', 'Teacher Assistant', 'Direktur', 'Cleaning Service']);
-            $table->enum('Status_kepegawaian',['Tetap','Kontrak','Magang']);
-            $table->enum('Status',['Aktif', 'Tidak Aktif']);
-            $table->date('Tanggal_masuk');
-            $table->string('Username', 50)->unique();
-            $table->string('Password', 255);
+            $table->id('id_pegawai');
+            $table->string('kode_pegawai', 20)->unique();
+            $table->string('nama', 100);
+            $table->string('foto', 255)->nullable();
+            $table->enum('jenis_kelamin',['Laki-laki','Perempuan']);
+            $table->string('tempat_lahir', 100)->nullable();
+            $table->date('tanggal_lahir')->nullable();
+            $table->string('no_hp', 20)->nullable();
+            $table->string('email', 100)->nullable()->unique();
+            $table->string('provinsi', 100)->nullable();
+            $table->string('kabupaten', 100)->nullable();
+            $table->string('kecamatan', 100)->nullable();
+            $table->string('kelurahan', 100)->nullable();
+            $table->text('alamat')->nullable();
+            $table->string('kode_pos', 10)->nullable();
+            $table->string('pendidikan_terakhir', 50)->nullable();
+            $table->string('jurusan', 50)->nullable();
+            $table->enum('jabatan',['Admin', 'Tutor', 'Teacher Assistant', 'Direktur', 'Cleaning Service']);
+            $table->enum('status_kepegawaian',['Tetap','Kontrak','Magang']);
+            $table->enum('status',['Aktif', 'Tidak Aktif']);
+            $table->date('tanggal_masuk');
+            $table->string('username', 50)->unique();
+            $table->string('password', 255);
             $table->timestamps();
         });
     }
