@@ -9,10 +9,19 @@ loginBtn.addEventListener('click', function(e){
     if(window.matchMedia("(max-width: 768px)").matches)
     {
         navbarMenu.style.display = 'none';
-    }
+    } 
 });
 
 closePopup.addEventListener('click', function(e){
     e.preventDefault();
     popup.style.display = 'none';
 });
+
+// Membuka popup otomatis jika login gagal
+const errorMessage = document.querySelector('.error-message');
+if(errorMessage){
+    popup.style.display = 'flex';
+}
+
+
+

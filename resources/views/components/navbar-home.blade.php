@@ -13,7 +13,7 @@
                     <div class="logo-icon">
                         <img src="logo_osec.png" alt="logo OSEC">
                     </div>
-                    <div class="logo-text">
+                    <div class="logo-text"> 
                         <h2>
                             <span class="kata">
                                 <span class="huruf-besar">O</span><span>ne</span>
@@ -44,7 +44,7 @@
                     <li>
                         <a href="#about">About</a>
                     </li>
-                    <li>
+                    <li> 
                         <a href="#">Tutors</a>
                     </li>
                     <li class="dropdown">
@@ -77,16 +77,25 @@
             <div class="popup-box">
                 <span class="close-popup" id="closePopup">&times;</span>
                 <h3>User Login</h3>
-                    <div class="username">
-                        <label for="Username">Username</label>
-                        <input type="text" id="username" name="username" placeholder="Enter Username" required>
+                @if(session('error'))
+                    <div class="error-message">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        {{session('error')}}
                     </div>
-                    <div class="password">
-                        <label for="Password">Password</label>
-                        <input type="password" id="password" name="assword" placeholder="Enter Password" required>
-                    </div>
-                    <button>Login</button>
-                    <a href="">Don't have an account?Register</a>
+                @endif
+                    <form action="{{route('login.process')}}" method="POST">
+                        @csrf
+                        <div class="username">
+                            <label for="Username">Username</label>
+                            <input type="text" id="username" name="username" placeholder="Enter Username" required>
+                        </div>
+                        <div class="password">
+                            <label for="Password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                        </div>
+                        <button type="submit">Login</button>
+                    </form>
+                <a href="">Don't have an account?Register</a>
             </div>
         </div>
     </body>

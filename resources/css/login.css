@@ -1,4 +1,3 @@
-
 .popup-overlay{
     display: none;
     position: fixed;
@@ -12,7 +11,7 @@
 .popup-box{
     position: relative;
     width: 300px;
-    height: 320px;
+    height: 380px;
     background-color: rgba(76, 0, 255, 0.8);
     border-radius: 10px;
 }
@@ -23,6 +22,7 @@
     right: 12px;
     font-size: 25px;
     cursor: pointer;
+    color: white;
 }
 
 .popup-box h3{
@@ -67,3 +67,17 @@ input{
 .popup-box a:hover{
     text-decoration: underline;
 }
+
+.error-message{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25045a;
+    border: 1px solid #fca5a5;
+    color: white;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 12px;
+    margin: 0 12px;
+}
+
