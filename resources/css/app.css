@@ -4,6 +4,8 @@
 @import './footer.css';
 @import './login.css';
 @import './admin/dashboard.css';
+@import './admin/data-pegawai.css';
+@import './admin/data-pegawai/input-pegawai.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';

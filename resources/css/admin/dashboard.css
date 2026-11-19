@@ -2,12 +2,14 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    color: navy;
+    font-weight: bold;
 }
 
 .dashboard-header .user-login{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 10px; 
     padding: 10px;
 }
 
@@ -32,7 +34,7 @@
 }
 
 .navbar-menu-admin.active{
-    width: 20%;
+    width: 17%;
     align-items: flex-start;
     padding-left: 20px;
 }
@@ -68,6 +70,14 @@
     gap: 20px;
 }
 
+.menu li:hover{
+    color: yellow;
+}
+
+.navbar-admin-toggle:hover span{
+    background-color: yellow;
+}
+
 .menu a i, .menu form button i{
     font-size: 22px;
 }
@@ -101,14 +111,36 @@
         align-items: flex-end;
         padding: 30px;
         height: auto;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.1);
         color: navy ;
+        transition: none;
     }
+    .navbar-menu-admin.active{
+        width: 100%;
+        align-items: center;
+    }
+    
+    .navbar-menu-admin.active .navbar-admin-toggle{
+        margin-left: auto;
+    }
+
     .navbar-menu-admin .navbar-admin-toggle span{
         background-color: navy;
     }
-    .menu{
-        display: flex;
+
+    .menu-admin{
+        background-color: white;
+        width: 100%;
+    }
+
+    .menu i{
+        display: none;
+    }
+
+    .navbar-menu-admin.active .menu{
+        border: 2px solid navy;
+        padding: 20px 100px;
+        border-radius: 10px;
     }
 }
 

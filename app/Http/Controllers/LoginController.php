@@ -31,18 +31,18 @@ class LoginController extends Controller
                 'username' => $pegawai->username,
                 'jabatan' => $pegawai->jabatan,
             ]);
-            return redirect()->route('admin.dashboard');
+            return redirect()->route('admin.data-pegawai');
         }
         return back()->with('error', 'Username atau password salah, atau akun tidak aktif/tidak memiliki akses.');
     }
 
     // Halaman dashboard
-    public function dashboard()
+    public function dataPegawai()
     {
         if (!session('admin_login')) {
             return redirect('/')->with('error', 'Silakan login terlebih dahulu.');
         }
-        return view('admin.dashboard');
+        return view('admin.data-pegawai');
     }
 
      public function logout(Request $request)

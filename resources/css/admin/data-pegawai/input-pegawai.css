@@ -1,0 +1,72 @@
+.container-input-pegawai{
+    width: 50%;
+    border: 2px solid black;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 30px auto;
+}
+.container-input-pegawai .header button{
+    background: navy;
+    color: white;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.container-input-pegawai h2{
+    text-align: center;
+    padding: 40px;
+    font-weight: bold;
+    font-size: 30px;
+}
+.container-input-pegawai .form-group{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.container-input-pegawai .form-group label{
+    width: 40%;
+    font-weight: bold;
+}
+.container-input-pegawai .form-group input{
+    border: 1px solid black;
+}
+.container-input-pegawai .aksi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container-input-pegawai .aksi button{
+    width: 100px;
+    height: 50px;
+    background: navy;
+    border-radius: 10px;
+    margin-top: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .container-input-pegawai{
+        width: 90%;
+        margin: 0;
+        padding: 2px;
+        margin: 10px auto;
+        border: none;
+    }
+    .container-input-pegawai h2{
+        font-size: 20px;
+    }
+    .container-input-pegawai .header{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-input-pegawai .form-group{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .container-input-pegawai .form-group span{
+        display: none;
+    }
+}

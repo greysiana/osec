@@ -96,7 +96,7 @@
                         <button type="submit">Login</button>
                     </form>
                 <a href="">Don't have an account?Register</a>
-            </div>
+            </div> 
         </div>
     </body>
 </html> 
