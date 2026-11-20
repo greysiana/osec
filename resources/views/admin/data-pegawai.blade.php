@@ -59,7 +59,7 @@
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$data->nama}}</td>
                                 <td>{{$data->username}}</td>
-                                <td>{{$data->jabatan}}</td>
+                                <td>{{$data->jabatan->nama_jabatan ?? '-' }}</td>
                                 <td>{{$data->status}}</td>
                             </tr>
                         @endforeach

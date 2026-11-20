@@ -10,7 +10,7 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
+    { 
         Schema::create('pegawai', function (Blueprint $table) {
             $table->id('id_pegawai');
             $table->string('kode_pegawai', 20)->unique();
@@ -29,7 +29,8 @@ return new class extends Migration
             $table->string('kode_pos', 10)->nullable();
             $table->string('pendidikan_terakhir', 50)->nullable();
             $table->string('jurusan', 50)->nullable();
-            $table->enum('jabatan',['Admin', 'Tutor', 'Teacher Assistant', 'Direktur', 'Cleaning Service']);
+            $table->unsignedBigInteger('id_jabatan');
+            $table->foreign('id_jabatan')->references('id_jabatan')->on('jabatan')->onDelete('restrict');
             $table->enum('status_kepegawaian',['Tetap','Kontrak','Magang']);
             $table->enum('status',['Aktif', 'Tidak Aktif']);
             $table->date('tanggal_masuk');

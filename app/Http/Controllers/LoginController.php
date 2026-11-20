@@ -17,10 +17,16 @@ class LoginController extends Controller
         ]);
 
         // Cari username di database
-        $pegawai = DB::table('pegawai')->where('username', $request->username)->first();
+        $pegawai = DB::table('pegawai')->join('jabatan','pegawai.id_jabatan', '=', 'jabatan.id_jabatan')
+                ->where('username', $request->username)
+                ->select(
+                    'pegawai.*',
+                    'jabatan.nama_jabatan'
+                )
+                ->first();
 
         // Periksa username dan password
-        if ( $pegawai && Hash::check($request->password, $pegawai->password) && strtolower($pegawai->jabatan) === 'admin' && strtolower($pegawai->status) === 'aktif') 
+        if ( $pegawai && Hash::check($request->password, $pegawai->password) && strtolower($pegawai->nama_jabatan) === 'admin' && strtolower($pegawai->status) === 'aktif') 
         {
             // Simpan informasi login ke session
             $request->session()->regenerate();
@@ -29,7 +35,7 @@ class LoginController extends Controller
                 'id_pegawai' => $pegawai->id_pegawai,
                 'nama' => $pegawai->nama,
                 'username' => $pegawai->username,
-                'jabatan' => $pegawai->jabatan,
+                'jabatan' => $pegawai->nama_jabatan,
             ]);
             return redirect()->route('admin.data-pegawai');
         }
